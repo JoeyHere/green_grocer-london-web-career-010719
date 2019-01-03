@@ -14,7 +14,17 @@ consolidated_hash
 end
 
 def apply_coupons(cart, coupons)
-  # code here
+  cart.each do |item, values|
+    value.each do |coupon|
+      if item == coupon[:item] && values[:count] > coupon[:num]
+        cart[item][:count] -= coupon[:num]
+        cart["#{item} W/COUPON"] = {}
+        cart["#{item} W/COUPON"][:price] = coupon[:price]
+        cart["#{item} W/COUPON"][:count] = 1
+        cart["#{item} W/COUPON"][:clearance] = cart[item][:clearance]
+      end
+    end
+  end
 end
 
 def apply_clearance(cart)
