@@ -6,7 +6,7 @@ consolidated_hash = {}
         consolidated_hash[food] = price
         consolidated_hash[food][:count] = 1
       else
-      consolidated_hash[food][:count] += 1
+        consolidated_hash[food][:count] += 1
       end
     end
   end
