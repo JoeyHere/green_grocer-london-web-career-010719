@@ -5,8 +5,9 @@ consolidated_hash = {}
       if consolidated_hash[food] == nil
         consolidated_hash[food] = price
         consolidated_hash[food][:count] = 1
-      end
+      else
       consolidated_hash[food][:count] += 1
+      end
     end
   end
 consolidated_hash
