@@ -3,8 +3,8 @@ consolidated_hash = {}
   cart.each do |item|
     item.each do |food, price|
       if consolidated_hash[food] == nil
-        consolidated_hash[food] = price 
-        consolodated_hash[food][:count] = 1 
+        consolidated_hash[food] = price
+        consolodated_hash[food][:count] = 1
       end
       consolodated_hash[food][:count] += 1
     end
